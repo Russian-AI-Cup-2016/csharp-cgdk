@@ -31,4 +31,4 @@ for %%i in (Properties\*.cs) do (
     set FILES=!FILES! %%i
 )
 
-call "%COMPILER_PATH:"=%csc" /optimize+ /r:System.Numerics.dll /out:%name%.exe!FILES! 1>compilation.log 2>&1
+call "%COMPILER_PATH:"=%csc" /optimize+ /reference:System.Numerics.dll /platform:anycpu32bitpreferred /out:%name%.exe!FILES! 1>compilation.log 2>&1
